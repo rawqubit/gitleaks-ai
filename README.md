@@ -3,6 +3,7 @@
 > **AI-enhanced secrets scanner** with Shannon entropy analysis and LLM-powered false-positive elimination. A significant upgrade over pure regex-based scanners.
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![CI](https://github.com/rawqubit/gitleaks-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/rawqubit/gitleaks-ai/actions/workflows/ci.yml)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4.1-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Security](https://img.shields.io/badge/Category-DevSecOps-red?style=flat-square)]()
