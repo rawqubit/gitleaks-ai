@@ -160,6 +160,44 @@ repos:
 
 ---
 
+
+## Demo
+
+```
+$ gitleaks-ai --path ./my-project
+
+ gitleaks-ai v1.1.0  AI-Enhanced Secrets Scanner
+ Scanning: ./my-project (347 files)
+
+ Scanning for secrets...
+
++---------------------------+----------------------------------------------+
+| File                      | config/database.py                           |
+| Line                      | 14                                           |
+| Pattern                   | Generic API key                              |
+| Entropy Score             | 5.82 / 8.0 (HIGH)                           |
+| LLM Verdict               | TRUE POSITIVE — active AWS access key        |
+| Recommendation            | Revoke immediately, rotate, use AWS Secrets  |
++---------------------------+----------------------------------------------+
+
+| File                      | scripts/deploy.sh                            |
+| Line                      | 33                                           |
+| Pattern                   | Generic high-entropy string                  |
+| Entropy Score             | 4.21 / 8.0 (MEDIUM)                        |
+| LLM Verdict               | FALSE POSITIVE — base64 encoded config data  |
+| Recommendation            | Safe to ignore                              |
++---------------------------+----------------------------------------------+
+
+ Summary
+  Files scanned:       347
+  Candidates found:    8
+  True positives:      1   (after LLM triage)
+  False positives:     7   (suppressed)
+  FP reduction:        87.5%
+
+Exit code: 1 (secrets found)
+```
+
 ## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
