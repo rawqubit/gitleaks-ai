@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "gitleaks-ai"
+version = "1.1.0"
+description = "AI-enhanced secrets scanner with Shannon entropy analysis and LLM false-positive elimination"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Srinikhil Chakilam", email = "4531201+rawqubit@users.noreply.github.com" }]
+keywords = ["security", "secrets", "scanning", "entropy", "devsecops", "gitleaks"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.0",
+  "click>=8.0",
+  "rich>=13.0",
+  "gitpython>=3.1",
+]
+
+[project.scripts]
+gitleaks-ai = "main:cli"
+
+[project.urls]
+Homepage = "https://github.com/rawqubit/gitleaks-ai"
+Repository = "https://github.com/rawqubit/gitleaks-ai"
+"Bug Tracker" = "https://github.com/rawqubit/gitleaks-ai/issues"
